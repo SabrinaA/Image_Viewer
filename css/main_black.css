@@ -99,26 +99,10 @@ textarea {
    ========================================================================== */
 
 html {
-	
-	background: #080808; /* Old browsers */
-	background: -moz-linear-gradient(top,  #080808 10%, #051136 75%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(10%,#080808), color-stop(75%,#051136)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #080808 10%,#051136 75%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #080808 10%,#051136 75%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #080808 10%,#051136 75%); /* IE10+ */
-	background: linear-gradient(to bottom,  #080808 10%,#051136 75%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#080808', endColorstr='#051136',GradientType=0 ); /* IE6-9 */
-	
-/*	background-color: #080808;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#080808), to(#303030)); /* Chrome, Safari 4+ */
-/*	background-image: -webkit-linear-gradient(top, #080808, #303030); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
-/*	background-image:    -moz-linear-gradient(top, #080808, #303030); /* Firefox 3.6-15 */
-/*	background-image:      -o-linear-gradient(top, #080808, #303030); /* Opera 11.10-12.00 */
-/*	background-image:         linear-gradient(to bottom, #080808, #303030); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
-	
+	background-color:#212121;
 	color: #F0F0F0;
 	height: 100%;
-	width: 760px;
+	width: 960px;
 	margin:0px auto;	
 }
 
@@ -129,15 +113,105 @@ body {
 }
 
 p {
-	font-size: 0,72em;
-	line-height: 145%;
+    font-size: 0.9em;
+    line-height: 120%;
 }
 
-nav li {
-	display: inline;
+section {
+	float: left;
+	width: 285px;
+	margin: 5px;	
+	padding: 10px;
 }
 
+section img {
+	float: left;
+	padding-top: 10px;
+}
 
+section article p {
+	margin-left: 60px;
+}
+
+#wrapper {
+	padding: 5px;
+	width: 960px;
+	overflow: hidden;
+	clear: both;
+	width: 100%;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+.box_style {
+	-webkit-border-radius: 12px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+    border-radius: 12px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+
+  	/* useful if you don't want a bg color from leaking outside the border: */
+	background-clip: padding-box; /* Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+ */
+
+   -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 10px #000000;
+}
+h4 {
+    font-size: 1em;
+    margin: 0.5em;
+   }
+   
+#header {
+    background-color:#212121;
+    color:#fff;
+    display:block;
+    height:150px;
+ 	width:400px;
+ 	margin: 0 auto;
+    font:28px/1.3 Arial;
+}
+
+#header h1{
+    font-size:30px;
+    font-weight:normal;
+    margin: 0 auto;
+    padding:10px 10px;
+}
+
+#lehrtext {
+	background-color:#212121;
+	width:800px;
+	font:14px/1.1 Arial,sans-serif;
+	color:#fff;
+	padding:10px 10px;	
+}
 
 
 
