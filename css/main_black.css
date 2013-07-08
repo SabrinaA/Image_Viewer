@@ -179,9 +179,9 @@ section article p {
   	/* useful if you don't want a bg color from leaking outside the border: */
 	background-clip: padding-box; /* Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+ */
 
-   -moz-box-shadow:    inset 0 0 10px #000000;
-   -webkit-box-shadow: inset 0 0 10px #000000;
-   box-shadow:         inset 0 0 10px #000000;
+	-moz-box-shadow:    inset 0 0 10px #000000;
+	-webkit-box-shadow: inset 0 0 10px #000000;
+	box-shadow:         inset 0 0 10px #000000;
 }
 
 
@@ -225,8 +225,9 @@ section article p {
 }
 
 input[type=radio]:checked ~ label {
-  background: white;
+  background: #121212;
   border-bottom: 1px solid white;
+  border-radius: 5px;
   z-index: 2;
 }
 
