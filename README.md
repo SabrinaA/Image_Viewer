@@ -1,4 +1,4 @@
 Image_Viewer
 ============
 
-In diesem Repository soll ein DICOM Image Viewer entstehen.
+In diesem Repository soll ein webbasierter DICOM Image Viewer entstehen.
