@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- this simple thing is indeed the correct declaration for html5 -->
+
+<html lang="en" >
+	<head>
+		<meta charset="utf-8" />
+		<title>Radiologie Trainer</title>
+		<link rel="stylesheet" href="../../css/normalize.css" />
+		<link rel="stylesheet" href="../../css/main_black.css" />
+		<!--<link href="css/layout.css" rel="stylesheet" type="text/css" />-->
+		<link href="../../css/menu.css" rel="stylesheet" type="text/css" />
+		
+		<!--
+			zu Entwicklungs und Testzwecken wird der JS erstmal direkt im HTML geschrieben
+		-->
+		<script>
+			function drawCanvas () {
+				// Referenz auf Canvas Objekt
+				var canvas = document.getElementbyID('dicom_viewer');
+				if (canvas.getContext) {
+					var context = canvas.getContext('2d');
+					context.fillStyle = 'rgb(255, 0, 0)';
+					context.fillRect(20, 40, 240, 160);)
+				}
+			}
+		</script>
+		<style>
+			canvas {
+				border: 1px solid #00B4FF;
+			}
+		</style>
+	</head>
+	<body onload="drawCanvas()">
+
+		<div id="header">
+		<header>
+		<h1>Radiologie Trainer</h1>
+		<img src="../../img/logo.jpg" width="100" height="77" title="homer">
+		</header>
+		</div>
+
+		<hr><!-- horizontal line -->
+
+			<div class="container">
+	
+			<ul id="nav">
+				<li>
+					<a href="../index.html">Home</a>
+				</li>
+		
+				<li><a class="hsubs" href="#">Konventionell</a>
+					<ul class="subs">
+						<li><a href="themes/1konventionell/thorax1.html">1 Thorax I</a></li>
+						<li><a href="themes/1konventionell/thorax2.html">2 Thorax II</a></li>
+						<li><a href="#">3 Abdomen</a></li>
+						<li><a href="#">4 Frakturen I</a></li>
+						<li><a href="#">5 Frakturen II</a></li>
+						<li><a href="#">6 Knochentumore</a></li>
+					</ul>
+				</li>		
+				<li><a class="hsubs" href="#">Body-CT</a></li>		
+				<li><a class="hsubs" href="#">Body-MRT</a></li>		
+				<li><a class="hsubs" href="#">Sono</a></li>		
+				<li><a class="hsubs" href="#">Mammo</a></li>
+				<li><a class="hsubs" href="#">Neurorad</a></li>
+				<div id="lavalamp"></div>
+				</ul>
+			</div><!-- End of Nav Div -->
+		<hr />
+
+		<div class="tabs">
+		    
+		   <div class="tab">
+		       <input type="radio" id="tab-1" name="tab-group-1" checked="">
+		       <label for="tab-1">Lehrbuchtext</label>
+		       
+		       <div class="content box_style">
+				    <p>
+						RadiologieTrainer ist aus einer Initiative der Assistenzärzte im Institut für Radiologie der Charité entstanden.
+						In Ergänzung zum klassischen Lehrbuch, Fortbildungsvorträgen und Supervision durch die Oberärzte haben wir ein
+						Lehrangebot entwickelt, dass sich auf ein peer-to-peer Konzept stützt.
+						<br>
+						Assistenten im 2. Jahr wissen eben noch besser wie Assistenten im 1. Jahr denken.
+						Es bestehen bereits schon vielfältige Angebote. Vermisst haben wir aber ein auf strukturiertes Lernkonzept
+						und die Möglichkeit, dies auf die Besonderheiten an unserem Institut anpassen zu können.
+						Kliniken, die unser Konzept übernehmen möchten und/oder eigene Inhalte enwickeln wollen können sich jederzeit bei uns melden.
+						(vielleicht gar nicht viel erklären)
+					</p>
+		       </div> 
+		   </div>
+		    
+		   <div class="tab">
+		       <input type="radio" id="tab-2" name="tab-group-1">
+		       <label for="tab-2">Video</label>
+		       
+		       <div class="content box_style">
+		       		<p>Hier steht dann ein Video</p>
+		       	 	<iframe width="420" height="315" src="//www.youtube-nocookie.com/embed/Zjrx86t1vi4?rel=0" frameborder="0" allowfullscreen></iframe>
+		       </div> 
+		   </div>
+		    
+		    <div class="tab">
+		       <input type="radio" id="tab-3" name="tab-group-1">
+		       <label for="tab-3">Image Viewer</label>
+		     
+		       <div class="content box_style">
+		          <p>Hier entsteht ein MRI Viewer.</p> 
+		          <canvas id="dicom_viewer" width="600" height="480">
+		          	Ihr Browser kann diese Grafik leider nicht darstellen.
+		          </canvas>
+		       </div> 
+		   </div>
+		    
+		</div>
+
+	
+
+		<footer>
+			Radiologie Trainer | Copyright by Michael Scheel
+		</footer>
+	</body>
+</html>
