@@ -16,11 +16,11 @@
 		<script>
 			function drawCanvas () {
 				// Referenz auf Canvas Objekt
-				var canvas = document.getElementbyID('dicom_viewer');
+				var canvas = document.getElementById('dicom_viewer');
 				if (canvas.getContext) {
 					var context = canvas.getContext('2d');
 					context.fillStyle = 'rgb(255, 0, 0)';
-					context.fillRect(20, 40, 240, 160);)
+					context.fillRect(20, 40, 240, 160);
 				}
 			}
 		</script>
