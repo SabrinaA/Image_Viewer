@@ -30,7 +30,52 @@
 					context.fillStyle = 'rgb(255, 0, 0)';
 					context.fillRect(20, 40, 240, 160);
 				}
-			}
+			};
+
+				/*
+				 *
+				 
+				function setImage() {
+					var canvas = document.getElementById('dicom_viewer');
+					//Bildobjekt erzeugen
+					var img = new Image();
+					img.src = '../uni_ruhr_kopf.jpg'
+					var context = canvas.getContext('2d');
+					context.setImage(img, 100, 20);
+
+				}*/
+
+					/*
+					 * 
+					 */
+					function setImage() {
+						var canvas = document.getElementById('dicom_viewer');
+						var img = new Image();
+						img.onload = function() {
+							if (canvas.getContext) {
+								var context = canvas.getContext('2d');
+								context.drawImage(img, 0, 0, 500, 500);
+							}
+						}
+						img.src = 'img/uni_ruhr_kopf.jpg';
+					}
+					
+					// zeigt den aktuellen Status des Range Input Feldes an
+					function showValue(newValue) {
+						document.getElementById("range").innerHTML = newValue;
+					}
+						/*
+							
+
+							ranger.onchange = function() {
+								var ranger = document.getElementById('scale'),
+							var image = document.getElementById('dicom_viewer'),
+							width = image.width, 
+							height = image.height;
+								image.width = width * (ranger.value / 100);
+								image.height = height * (ranger.value / 100);
+							} */
+
 		</script>
 		<style>
 			canvas {
@@ -52,10 +97,7 @@
 			<div class="container">
 	
 			<ul id="nav">
-				<li>
-					<a href="../index.html">Home</a>
-				</li>
-		
+				<li><a href="../index.html">Home</a></li>		
 				<li><a class="hsubs" href="#">Konventionell</a>
 					<ul class="subs">
 						<li><a href="themes/1konventionell/thorax1.html">1 Thorax I</a></li>
@@ -112,11 +154,14 @@
 		       <label for="tab-3">Image Viewer</label>
 		     
 		       <div class="content box_style">
-		          <p>Hier entsteht ein MRI Viewer.</p> 
-		          <canvas id="dicom_viewer" width="600" height="480">
-		          	Ihr Browser kann diese Grafik leider nicht darstellen.
-		          </canvas>
-		          <input type="range" min="0" max="50" value="10" />
+		       		<p>Hier entsteht ein MRI Viewer.</p>
+		           	<input id="scale" type="range" min="-2.5" max="3.0" step="0.1" value="1" onchange="showValue(this.value)"/>
+		           	<span id="range">0</span>
+		           	<button id="setImage" onclick="setImage()">Lade Bild</button> 
+		        	<canvas id="dicom_viewer" width="600" height="500">
+		          		Ihr Browser kann diese Grafik leider nicht darstellen.
+		        	</canvas>
+		         
 		       </div> 
 		   </div>
 		    
