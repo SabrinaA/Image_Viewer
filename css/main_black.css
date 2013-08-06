@@ -113,8 +113,9 @@ body {
 }
 
 p {
-    font-size: 0.9em;
+    font-size: 0.95em;
     line-height: 120%;
+    margin-top: 0.5em;
 }
 
 section {
@@ -191,7 +192,7 @@ section article p {
 
 .tabs {
 	position: relative;
-	min-height: 600px; /* This part sucks */
+	min-height: 650px; /* This part sucks */
 	clear: both;
 	margin: 25px 0;
 }
@@ -270,6 +271,10 @@ h4 {
 	padding: 10px 10px;
 }
 
+canvas {
+	display: inherit;
+	margin-top: 2%;
+}
 
 
 
