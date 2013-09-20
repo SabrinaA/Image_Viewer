@@ -97,7 +97,7 @@ textarea {
 /* ==========================================================================
    Author's (Sabrina Altmann) custom styles 
    ========================================================================== */
-
+  
 html {
 	background-color:#212121;
 	color: #F0F0F0;
@@ -276,7 +276,18 @@ canvas {
 	margin-top: 2%;
 }
 
-
+/*
+ * Author: Michael Scheel
+ *
+.reflectBelow{
+	margin: 20 auto;
+	width: 530px; /* has to much image width */
+/*	padding: 0px;
+	
+	-webkit-box-reflect: below 5 
+	-webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.4, transparent), to(black)); 
+}
+*/
 
 
 
