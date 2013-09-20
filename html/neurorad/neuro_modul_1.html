@@ -19,7 +19,7 @@
         <script type="text/javascript" src="js/libs/jsdicom-lib/src/qr.js"></script>
 		
 		<!--
-			zu Entwicklungs und Testzwecken wird der JS erstmal direkt im HTML geschrieben
+			Zu Entwicklungs und Testzwecken wird der JS erstmal direkt im HTML geschrieben
 		-->
 		<script>
 			
@@ -31,16 +31,16 @@
 				var canvas = document.getElementById('dicom_viewer');
 				if (canvas.getContext) {
 					var context = canvas.getContext('2d');
-					context.globalAlpha = 0.5;
-					context.fillStyle = 'rgb(0, 0, 128)';
-					context.fillRect(20, 20, 140, 140);
-					context.fillRect(60, 60, 140, 140);
-					context.fillRect(100, 100, 140, 140);
+					//context.globalAlpha = 0.5;
+					//context.fillStyle = 'rgb(0, 0, 128)';
+					//context.fillRect(20, 20, 140, 140);
+					//context.fillRect(60, 60, 140, 140);
+					//context.fillRect(100, 100, 140, 140);
 					
 				}
 			};
 
-				/*
+				/* V1
 				 * Test um Bild in Canvas zu laden
 				 
 				function setImage() {
@@ -53,7 +53,7 @@
 
 				}*/
 
-					/*
+					/* V2
 					 * Bild ins Canvas laden
 					 *
 					function setImage() {
@@ -152,7 +152,7 @@
 	
 	function test() {
 	var canvas = document.getElementById('dicom_viewer');
-	canvas.width = 500; canvas.height = 500;
+	canvas.width = 450; canvas.height = 450;
 	var img = new Image;
 	window.onload = function(){		
 		var ctx = canvas.getContext('2d');
@@ -324,7 +324,7 @@
 			}
 		</style>
 	</head>
-	<body onload="drawCanvas(); ">
+	<body onload="drawCanvas(); test(); ">
 
 		<div id="header">
 		<header>
@@ -407,7 +407,10 @@
 			           		<td><button id="reset" onclick="resetCanvas()">Reset</button></td>
 			           	</tr> 
 			       	</table> 
-		        	<canvas id="dicom_viewer" width="500" height="500">
+			       	<p>Hier gehts zum
+			    	<a href="/Image_Viewer/dwv/dwv_index.html">DICOM Viewer.</a>
+			    	</p> 
+			       	<canvas id="dicom_viewer" width="450" height="450">
 		          		Ihr Browser kann diese Grafik leider nicht darstellen.
 		        	</canvas>
 		        	

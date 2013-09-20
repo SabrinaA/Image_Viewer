@@ -1,0 +1,16 @@
+{
+  "name": "dwv",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ivmartel/dwv.git"
+  },
+  "scripts": {
+    "test": "grunt test --verbose"
+  },
+  "devDependencies": {
+    "grunt": "~0.4",
+    "grunt-cli": "~0.1",
+    "grunt-contrib-qunit": "~0.2.2"
+  }
+}
+
